@@ -128,6 +128,13 @@ jobs:
           echo "REPO_TOKEN密匙制作教程：https://git.io/jm.md"
           exit 1
         fi
+        
+    - name: Maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 512
+        swap-size-mb: 1024
+        remove-dotnet: 'true'
     
     - name: 准备结束
       uses: actions/checkout@v4
