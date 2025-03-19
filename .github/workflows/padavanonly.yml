@@ -28,7 +28,7 @@ on:
         default: 'ax3000'
         type: choice
         options:
-          - 'ax3000'
+          - '360t7'
           - 'ax3000-gsw-usboffload'
           - 'ax4200-bpir3_mini'
           - 'ax6000'
