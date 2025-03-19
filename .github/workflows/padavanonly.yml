@@ -25,14 +25,11 @@ on:
       CONFIG_FILE:
         description: '请选择[seed文件夹内]的配置文件'
         required: true
-        default: 'ax3000'
+        default: '360t7'
         type: choice
         options:
           - '360t7'
-          - 'ax3000-gsw-usboffload'
-          - 'ax4200-bpir3_mini'
-          - 'ax6000'
-          - 'nx60pro-ipailna-high-power'
+          - 'q30pro'
           - 'x86_64'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
