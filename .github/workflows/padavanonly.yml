@@ -9,12 +9,12 @@
 #
 #
 
-name: Padavanonly
+name: Padavanonly-mt798x
 on:
   workflow_dispatch:
     inputs:
       REPO_BRANCH:
-        description: 'Padavanonly源码-请选择分支'
+        description: 'mt798x源码-请选择分支'
         required: true
         default: 'openwrt-23.05'
         type: choice
