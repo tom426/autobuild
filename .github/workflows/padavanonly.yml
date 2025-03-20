@@ -25,11 +25,13 @@ on:
       CONFIG_FILE:
         description: '请选择[seed文件夹内]的配置文件'
         required: true
-        default: '360t7'
+        default: '2410-360t7'
         type: choice
         options:
-          - '360t7'
-          - 'q30pro'
+          - '2410-360t7'
+          - '2410-q30pro'
+          - '2305-360t7'
+          - '2305-q30pro'
           - 'x86_64'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
