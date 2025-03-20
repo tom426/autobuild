@@ -16,10 +16,9 @@ on:
       REPO_BRANCH:
         description: '（Lienol源码）请选择源码分支'
         required: true
-        default: '21.02'
+        default: '19.07'
         type: choice
         options:
-          - 'main'
           - '24.10'
           - '23.05'
           - '22.03'

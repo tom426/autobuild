@@ -27,16 +27,15 @@ on:
         required: true
         default: ''
       kernel_usage:
-        description: "内核仓库：stable、flippy、dev、beta"
+        description: "内核仓库：stable、dev、flippy、rk3588"
         required: true
         default: 'stable'
         type: choice
         options:
-          - stable
-          - flippy
-          - dev
-          - beta
-          - rk35xx
+          - 'stable'
+          - 'dev'
+          - 'flippy'
+          - 'rk3588'
       rootfs_size:
         description: '设置rootfs大小(单位：MiB)'
         required: true
@@ -70,7 +69,7 @@ on:
     branches:
       - main
     paths:
-      - 'build/Lede/relevance/armsrstart'
+      - 'bconfig'
 
 env:
   GITHUB_LINK: https://github.com/${{github.repository}}
@@ -87,21 +86,18 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:    
-    - name: "Optimize Disk Space"
-      uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.0"
+    - name: 释放Ubuntu磁盘空间
+      uses: endersonmenezes/free-disk-space@v2
       with:
-        operate_sudo: "True"
-        general_include: ".+"
-        docker_include: ".+"
-        docker_prune: "True"
-        docker_clean: "True"
-        apt_prune: "True"
-        apt_clean: "True"
-        homebrew_prune: "True"
-        homebrew_clean: "True"
-        npm_prune: "True"
-        npm_clean: "True"
-        os_swap: "True"
+        remove_android: true
+        remove_dotnet: true
+        remove_haskell: true
+        remove_tool_cache: true
+        remove_swap: true
+        remove_packages: "azure-cli google-cloud-cli microsoft-edge-stable google-chrome-stable firefox postgresql* temurin-* *llvm* mysql* dotnet-sdk-*"
+        remove_packages_one_command: true
+        remove_folders: "/usr/share/swift /usr/share/miniconda /usr/share/az* /usr/share/glade* /usr/local/lib/node_modules /usr/local/share/chromium /usr/local/share/powershell"
+        testing: false
     
     - name: 准备结束
       uses: actions/checkout@v4
