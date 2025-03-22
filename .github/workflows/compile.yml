@@ -50,7 +50,6 @@ jobs:
         else
           source ${GITHUB_WORKSPACE}/build/${FOLDER_NAME}/relevance/settings.ini
         fi
-        curl -fsSL https://raw.githubusercontent.com/281677160/common/cheshi/common.sh -o ${GITHUB_WORKSPACE}/build/${{ env.FOLDER_NAME }}/common.sh
         source ${GITHUB_WORKSPACE}/build/${{ env.FOLDER_NAME }}/common.sh && Diy_menu1
 
     - name: 清理因转换CPU而停止的工作流程
