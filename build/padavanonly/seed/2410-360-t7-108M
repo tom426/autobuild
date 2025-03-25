@@ -370,7 +370,6 @@ CONFIG_WARP_VERSION=2
 CONFIG_WED_HW_RRO_SUPPORT=y
 # CONFIG_WOLFSSL_HAS_ECC25519 is not set
 CONFIG_WPA_MBO_SUPPORT=y
-CONFIG_WPA_MSG_MIN_PRIORITY=3
 CONFIG_boost-compile-visibility-hidden=y
 CONFIG_boost-runtime-shared=y
 CONFIG_boost-static-and-shared-libs=y
