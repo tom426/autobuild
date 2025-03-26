@@ -123,8 +123,6 @@ CONFIG_MTK_WSC_V2_SUPPORT=y
 # CONFIG_OPENSSL_ENGINE_BUILTIN is not set
 # CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM is not set
 CONFIG_OPENSSL_WITH_NPN=y
-CONFIG_PACKAGE_6rd=y
-CONFIG_PACKAGE_6to4=y
 CONFIG_PACKAGE_attr=y
 CONFIG_PACKAGE_automount=m
 CONFIG_PACKAGE_autosamba=y
@@ -186,7 +184,6 @@ CONFIG_PACKAGE_kmod-crypto-hmac=y
 CONFIG_PACKAGE_kmod-crypto-md4=y
 CONFIG_PACKAGE_kmod-crypto-md5=y
 CONFIG_PACKAGE_kmod-crypto-seqiv=y
-CONFIG_PACKAGE_kmod-crypto-sha256=m
 CONFIG_PACKAGE_kmod-crypto-sha512=y
 CONFIG_PACKAGE_kmod-ebtables=y
 CONFIG_PACKAGE_kmod-ebtables-ipv4=y
@@ -265,6 +262,7 @@ CONFIG_PACKAGE_libavahi-client=y
 CONFIG_PACKAGE_libavahi-dbus-support=y
 CONFIG_PACKAGE_libblkid=y
 CONFIG_PACKAGE_libbpf=y
+CONFIG_PACKAGE_libcap=y
 CONFIG_PACKAGE_libcbor=y
 CONFIG_PACKAGE_libcomerr=m
 CONFIG_PACKAGE_libdaemon=y
@@ -291,6 +289,7 @@ CONFIG_PACKAGE_libopenssl-afalg_sync=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 CONFIG_PACKAGE_libpcap=y
 CONFIG_PACKAGE_libpcre=y
+CONFIG_PACKAGE_libpcre2=y
 CONFIG_PACKAGE_libpopt=y
 CONFIG_PACKAGE_libreadline=y
 CONFIG_PACKAGE_libsmartcols=m
@@ -356,11 +355,13 @@ CONFIG_PACKAGE_tcping=y
 CONFIG_PACKAGE_terminfo=y
 CONFIG_PACKAGE_usbutils=m
 CONFIG_PACKAGE_vlmcsd=y
+CONFIG_PACKAGE_wget-ssl=y
 CONFIG_PACKAGE_wifi-dats=y
 CONFIG_PACKAGE_wireless-regdb=y
 CONFIG_PACKAGE_wireless-tools=y
 CONFIG_PACKAGE_wsdd2=y
 CONFIG_PACKAGE_xray-core=y
+CONFIG_PACKAGE_zlib=y
 CONFIG_PACKAGE_zram-swap=y
 # CONFIG_PKG_CHECK_FORMAT_SECURITY is not set
 # CONFIG_PKG_FORTIFY_SOURCE_1 is not set
