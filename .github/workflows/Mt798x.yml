@@ -9,30 +9,35 @@
 #
 #
 
-name: Immortalwrt_Mt798x
+name: mt798x-mtk闭源驱动
 on:
   workflow_dispatch:
     inputs:
       REPO_BRANCH:
-        description: '天灵源码-请选择分支'
+        description: 'mt798x源码-请选择分支'
         required: true
-        default: 'openwrt-23.05'
+        default: '2410'
         type: choice
         options:
-          - 'openwrt-24.10'
+          - '2410'
           - 'openwrt-23.05'
-          - 'openwrt-21.02'
-          - 'openwrt-18.06'
-          - 'openwrt-18.06-k5.4'
-          - 'master'
+          - 'hanwckf-21.02'
       CONFIG_FILE:
         description: '请选择[seed文件夹内]的配置文件'
         required: true
-        default: 'x86_64'
+        default: '2305-360-t7-108M'
         type: choice
         options:
-          - 'x86_64'
-          - 'aarch64'
+          - '2410-360-t7-108M'
+          - '2410-cudy-tr3000-v1'
+          - '2410-jcg-q30'
+          - '2305-360-t7-108M'
+          - '2305-clt-r30b1-112M'
+          - '2305-cmcc-rax3000m-emmc'
+          - '2305-jcg-q30'
+          - '2305-xiaomi_redmi-router-ax6000'
+          - '2305-ariaboard_photonicat'
+          - 'huasifei_wh3000-emmc'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
@@ -111,9 +116,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Mt798x]
+        target: [padavanonly]
         
-        # 请勿对 target: [Mt798x] 做任何修改
+        # 请勿对 target: [padavanonly] 做任何修改
         
     steps:
     - name: 密匙检测（密匙为空则退出）
