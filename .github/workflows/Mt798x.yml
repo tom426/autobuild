@@ -9,7 +9,7 @@
 #
 #
 
-name: mt798x-mtk闭源驱动
+name: mt798x-mtk闭源
 on:
   workflow_dispatch:
     inputs:
