@@ -35,6 +35,7 @@ on:
           - 'xiaomi_redmi-router-ax6000'
           - 'ariaboard_photonicat'
           - 'huasifei_wh3000-emmc'
+          - 'CMCC-RAX3000Me'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
