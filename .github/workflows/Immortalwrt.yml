@@ -43,7 +43,7 @@ on:
           - 'Telegram'
           - 'Pushplus'
       RETAIN_MINUTE:
-        description: '请修改清理[X]分钟之前的Artifacts数值(最低可以填10)'
+        description: '清理[X]分钟内的操作记录'
         required: true
         default: '10080'
       SSH_ACTION:
