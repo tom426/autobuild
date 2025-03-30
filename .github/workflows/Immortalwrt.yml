@@ -43,7 +43,7 @@ on:
           - 'Telegram'
           - 'Pushplus'
       RETAIN_MINUTE:
-        description: '清理[X]分钟内的操作记录'
+        description: '清理[X]分钟内的操作记录(最低30)'
         required: true
         default: '10080'
       SSH_ACTION:
