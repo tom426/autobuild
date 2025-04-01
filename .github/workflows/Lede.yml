@@ -92,7 +92,7 @@ env:
   GIT_REPOSITORY: ${{github.repository}}
   RUN_NUMBER: ${{github.run_number}}
   RUN_WORKFLOW: ${{github.workflow}}
-  REPO_TOKEN: 111111111
+  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -116,6 +116,7 @@ jobs:
     steps:
     - name: 密匙检测（密匙为空则退出）
       run: |
+        cd ${GITHUB_WORKSPACE}
         if [[ -n "${{ env.REPO_TOKEN }}" ]]; then
           curl -s -H "Authorization: Bearer ${{ env.REPO_TOKEN }}" \
           https://api.github.com/repos/281677160/common/releases/tag/API > mishi
