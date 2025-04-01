@@ -33,6 +33,7 @@ on:
           - '360-t7-108M'
           - 'clt-r30b1-112M'
           - 'cmcc-rax3000m-emmc'
+          - 'cmcc-rax3000me'
           - 'jcg-q30'
           - 'xiaomi-redmi-router-ax6000'
       INFORMATION_NOTICE:
