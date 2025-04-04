@@ -3,7 +3,7 @@
 # DIY扩展二合一了，在此处可以增加插件
 # 自行拉取插件之前请SSH连接进入固件配置里面确认过没有你要的插件再单独拉取你需要的插件
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
-
+git clone --depth 1 -b main https://github.com/EasyTier/luci-app-easytier.git package/package-easytier
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.6.1"            # 修改openwrt后台地址(填0为关闭)
@@ -49,7 +49,7 @@ export AdGuardHome_Core="0"                  # 编译固件时自动增加AdGuar
 export Automatic_Mount_Settings="0"          # 编译时加入开启NTFS格式盘挂载的所需依赖(1为启用命令,填0为不作修改)
 
 # 去除网络共享(autosamba)
-export Disable_autosamba="0"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
+export Disable_autosamba="1"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
 
 # 其他
 export Ttyd_account_free_login="0"           # 设置ttyd免密登录(1为启用命令,填0为不作修改)
